@@ -18,6 +18,7 @@ urllib.request.install_opener(opener)
 authentication_url = 'https://m.facebook.com/login.php'
 
 # Input parameters we are going to send
+#======ToDO============
 payload = {
   'email': 'enter-your-email',
   'pass': 'enter-your-password'
@@ -34,7 +35,11 @@ resp = urllib.request.urlopen(req)
 contents = resp.read()
 print(contents)
 
+
+#======ToDO============
 url = "https://m.facebook.com/enter-profile-name/friends"
+
+
 data = requests.get(url, cookies=cj)
 soup = bs4.BeautifulSoup(data.text, 'html.parser')
 print(soup.prettify())
